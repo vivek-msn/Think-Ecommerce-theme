@@ -188,3 +188,13 @@ Tags: e-commerce, custom-menu, custom-logo, featured-images, footer-widgets, the
     max-width: 100%;
     height: auto;
 }
+
+/* cart proceed button */
+body:not(.woocommerce-block-theme-has-button-styles) .wc-block-components-button:not(.is-link){
+    background-color: #D2335B;
+}
+
+.wc-block-components-button:not(.is-link) .wc-block-components-button__text {
+    color: white;
+    font-weight: 800;
+}
