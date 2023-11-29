@@ -11,6 +11,45 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Tags: e-commerce, custom-menu, custom-logo, featured-images, footer-widgets, theme-options, translation-ready, blog, right-sidebar, sticky-post, threaded-comments
 */
 
+@font-face {
+    font-family: 'Rajdhani';
+    src: url('fonts/Rajdhani/Rajdhani-Regular.woff') format('woff');
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Rajdhani';
+    src: url('fonts/Rajdhani/Rajdhani-Medium.woff') format('woff');
+    font-weight: 500;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Rajdhani';
+    src: url('fonts/Rajdhani/Rajdhani-SemiBold.woff') format('woff');
+    font-weight: 600;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Rajdhani';
+    src: url('fonts/Rajdhani/Rajdhani-Bold.woff') format('woff');
+    font-weight: 700;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Seaweed Script';
+    src: url('fonts/seaweed-script/SeaweedScript-Regular.woff') format('woff');
+    font-weight: 400;
+    font-style: normal;
+}
+
+body{
+    font-family: 'Rajdhani', sans-serif;
+    font-weight: 400;
+}
 
 /* Header - Main Menu */
 .main-menu{
