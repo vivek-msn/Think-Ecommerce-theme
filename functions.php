@@ -8,6 +8,11 @@
  * @package think ecommerce
  */
 
+/**
+ * Register Custom Navigation Walker
+ */
+    require_once get_template_directory() . '/inc/class-wp-bootstrap-navwalker.php';
+
  /**
 * Enqueue scripts and styles.
 */

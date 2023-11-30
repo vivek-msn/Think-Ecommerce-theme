@@ -73,6 +73,10 @@ body{
     margin: 0; 
 }
 
+.main-menu .dropdown:hover>.dropdown-menu
+.main-menu .dropdown:hover>.dropdown-menu{
+    display:block;
+}
 /* Footer - Footer Menu */
 .footer-menu ul, .footer-widgets ul{ 
     list-style: none; 
