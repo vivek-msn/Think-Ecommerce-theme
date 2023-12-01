@@ -1,49 +1,51 @@
 /*
-Theme Name: Think Ecommerce
-Theme URI: http://www.ithinkservices.com/themes/Think-Ecommerce-theme
+Theme Name: Fancy Lab
+Theme URI: http://www.inbrackets.dev/themes/fancy-lab-theme
 Author: inbrackets
-Author URI: http://www.ithinkservices.com
-Description:Think Ecommerceis a compatible WooCommerce theme made with WordPress. It is the best theme for you to sell anything online, beautifuly designed and fully responsive.
+Author URI: http://www.inbrackets.dev
+Description: Fancy Lab is a compatible WooCommerce theme made with WordPress. It is the best theme for you to sell anything online, beautifuly designed and fully responsive.
 Version: 1.0
-Text-domain:Think Ecommerce
+Text-domain: fancy-lab
 License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Tags: e-commerce, custom-menu, custom-logo, featured-images, footer-widgets, theme-options, translation-ready, blog, right-sidebar, sticky-post, threaded-comments
 */
 
+
+/* rajdhani-regular - latin */
 @font-face {
     font-family: 'Rajdhani';
-    src: url('fonts/Rajdhani/Rajdhani-Regular.woff') format('woff');
+    font-style: normal;
     font-weight: 400;
-    font-style: normal;
+    src: url('fonts/rajdhani/rajdhani-v15-latin-regular.woff'); 
 }
-
+/* rajdhani-500 - latin */
 @font-face {
     font-family: 'Rajdhani';
-    src: url('fonts/Rajdhani/Rajdhani-Medium.woff') format('woff');
+    font-style: normal;
     font-weight: 500;
-    font-style: normal;
+    src: url('fonts/rajdhani/rajdhani-v15-latin-500.woff'); 
 }
-
+/* rajdhani-600 - latin */
 @font-face {
     font-family: 'Rajdhani';
-    src: url('fonts/Rajdhani/Rajdhani-SemiBold.woff') format('woff');
+    font-style: normal;
     font-weight: 600;
-    font-style: normal;
+    src: url('fonts/rajdhani/rajdhani-v15-latin-600.woff'); 
 }
-
+/* rajdhani-700 - latin */
 @font-face {
     font-family: 'Rajdhani';
-    src: url('fonts/Rajdhani/Rajdhani-Bold.woff') format('woff');
-    font-weight: 700;
     font-style: normal;
+    font-weight: 700;
+    src: url('fonts/rajdhani/rajdhani-v15-latin-700.woff'); 
 }
-
+/* seaweed-script-regular - latin */
 @font-face {
     font-family: 'Seaweed Script';
-    src: url('fonts/seaweed-script/SeaweedScript-Regular.woff') format('woff');
-    font-weight: 400;
     font-style: normal;
+    font-weight: 400;
+    src: url('fonts/seaweed-script/seaweed-script-v13-latin-regular.woff'); 
 }
 
 body{
@@ -73,10 +75,15 @@ body{
     margin: 0; 
 }
 
-.main-menu .dropdown:hover>.dropdown-menu
-.main-menu .dropdown:hover>.dropdown-menu{
-    display:block;
+.main-menu .dropdown:hover>.dropdown-menu, 
+.main-menu .dropup:hover>.dropdown-menu  {
+  display: block;
 }
+
+.main-menu .navbar-toggler-icon {
+    background-image: url('img/hamburger-menu.svg');
+}
+
 /* Footer - Footer Menu */
 .footer-menu ul, .footer-widgets ul{ 
     list-style: none; 
@@ -103,7 +110,26 @@ body{
     color: #ff9292; 
 }
 
+
 /* WooCommerce */
+
+/* Grid System */
+.woocommerce .col2-set .col-1,
+.woocommerce .col2-set .col-2{
+    flex: 0 0 50%;
+    max-width: 50%;
+}
+
+@media all and (max-width: 767px) {
+
+    .woocommerce .col2-set .col-1,
+    .woocommerce .col2-set .col-2{
+        flex: 0 0 100%;
+        max-width: 100%;
+    }
+
+}
+
 
 /* Shop */
 
@@ -221,6 +247,133 @@ body{
     padding: 12px;
 }
 
+
+/* Single Product */
+.woocommerce #respond input#submit.alt, 
+.woocommerce a.button.alt, 
+.woocommerce button.button.alt, 
+.woocommerce input.button.alt,
+.woocommerce ul.products li.product .button {
+    background-color: #D2335B;
+    color: #fff;
+}
+
+.woocommerce #respond input#submit.alt:hover, 
+.woocommerce a.button.alt:hover, 
+.woocommerce button.button.alt:hover, 
+.woocommerce input.button.alt:hover,
+.woocommerce ul.products li.product .button:hover {
+    background-color: #bd3759;
+}
+
+.product_meta > span{
+    display: block;
+}
+
+.woocommerce div.product p.price del, 
+.woocommerce div.product span.price del,
+.woocommerce ul.products li.product .price del .woocommerce-Price-amount{
+    color: #000;
+    font-size: 20px;
+    font-weight: 500;
+}
+
+.woocommerce div.product p.price ins, 
+.woocommerce div.product span.price ins, 
+.woocommerce-Price-amount {
+    font-size: 25px;
+    color: #000;
+    font-weight: 700;
+}
+
+.woocommerce span.onsale{
+    top: 19px;
+    left: 35px;
+    transform: rotate(90deg);
+    border-radius: 0;   
+    width: 84px;
+    padding: 0;
+    background-color: #D2335B;
+    margin: 0;
+    font-weight: 400;
+}
+
+.woocommerce span.onsale:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 83px;
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 23px 22px 0 0;
+    border-color: #D2335B transparent transparent transparent;
+}
+
+.woocommerce span.onsale:after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 83px;
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 0 22px 23px 0;
+    border-color: transparent transparent #D2335B transparent;
+}
+
+.woocommerce div.product .woocommerce-tabs ul.tabs{
+    padding: 0;
+
+}
+
+.woocommerce div.product .woocommerce-tabs ul.tabs li{
+    border-radius: 0;
+    margin: 0;
+}
+
+.woocommerce div.product .woocommerce-tabs ul.tabs li::after, 
+.woocommerce div.product .woocommerce-tabs ul.tabs li::before{
+    content: none;
+}
+
+.woocommerce #respond input#submit, 
+.woocommerce a.button, 
+.woocommerce button.button, 
+.woocommerce input.button{
+    background-color: #ffeb8a;
+}
+
+.woocommerce #respond input#submit:hover, 
+.woocommerce a.button:hover, 
+.woocommerce button.button:hover, 
+.woocommerce input.button:hover{
+    background-color: #ffe252;
+}
+
+/* Cart */
+
+.woocommerce-cart table.cart td.actions .coupon .input-text{
+    width: 150px;
+}
+
+
+/* Checkout */
+.woocommerce form .form-row {
+    display: block;
+}
+.woocommerce-checkout #customer_details{
+    margin-bottom: 20px;
+}
+.woocommerce table.shop_table{
+    border-collapse: collapse;
+}
+.woocommerce table.shop_table thead{
+    background-color: #D2335B;
+    color: #fff;
+}
+
+
 /* General */
 
 .size-auto, 
@@ -230,14 +383,4 @@ body{
 .size-thumbnail {
     max-width: 100%;
     height: auto;
-}
-
-/* cart proceed button */
-body:not(.woocommerce-block-theme-has-button-styles) .wc-block-components-button:not(.is-link){
-    background-color: #D2335B;
-}
-
-.wc-block-components-button:not(.is-link) .wc-block-components-button__text {
-    color: white;
-    font-weight: 800;
 }

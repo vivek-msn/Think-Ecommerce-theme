@@ -28,13 +28,13 @@
             <section class="top-bar">
                     <div class="container">
                         <div class="row">
-                        <div class="brand col-3">Logo</div>
-                        <div class="second-column col-9">
-                            <div class="account">Account</div>
+                        <div class="brand col-md-3 col-12 col-lg-2 text-centre text-md-left">Logo</div>
+                        <div class="second-column col-md-9 col-12 col-lg-10">
+                            <div class="accountcol-12">Account</div>
                             <nav class="main-menu navbar navbar-expand-md navbar-light" role="navigation">
                                 
                                     <!-- Brand and toggle get grouped for better mobile display -->
-                                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-controls="bs-example-navbar-collapse-1" aria-expanded="false" aria-label="<?php esc_attr_e( 'Toggle navigation', 'your-theme-slug' ); ?>">
+                                    <button class="navbar-toggler ml-auto" type="button" data-bs-toggle="collapse" data-bs-target="#bs-example-navbar-collapse-1" aria-controls="bs-example-navbar-collapse-1" aria-expanded="false" aria-label="<?php esc_attr_e( 'Toggle navigation', 'your-theme-slug' ); ?>">
                                         <span class="navbar-toggler-icon"></span>
                                     </button>
                                         <?php
