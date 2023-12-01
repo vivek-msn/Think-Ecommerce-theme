@@ -20,11 +20,12 @@
 <body <?php body_class();?>>
     <div id="page" class="site">
         <header>
-            <section class="search">
-                    <div class="container">
-                        Search
-                    </div>
-            </section>
+        <section class="search">
+				<div class="container">
+					<div class="text-center d-md-flex align-items-center">
+						<?php get_search_form(); ?>
+					</div>
+				</div>
             <section class="top-bar">
                     <div class="container">
                         <div class="row">
