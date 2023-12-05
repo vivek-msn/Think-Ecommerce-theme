@@ -71,6 +71,7 @@
  }
 
  add_filter( 'nav_menu_link_attributes', 'prefix_bs5_dropdown_data_attribute', 20, 3 );
+
 /**
  * Use namespaced data attribute for Bootstrap's dropdown toggles.
  *
@@ -87,4 +88,21 @@ function prefix_bs5_dropdown_data_attribute( $atts, $item, $args ) {
         }
     }
     return $atts;
+}
+
+/**
+ * Show cart contents / total Ajax
+ */
+add_filter( 'think_ecommerce_woocommerce_add_to_cart_fragments', 'think_ecommerce_woocommerce_header_add_to_cart_fragment' );
+
+function think_ecommerce_woocommerce_header_add_to_cart_fragment( $fragments ) {
+	global $woocommerce;
+
+	ob_start();
+
+	?>
+	<span class="items"><?php echo WC()->cart->get_cart_contents_count();?></span>
+	<?php
+	$fragments['span.items'] = ob_get_clean();
+	return $fragments;
 }

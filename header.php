@@ -31,7 +31,12 @@
                         <div class="row">
                         <div class="brand col-md-3 col-12 col-lg-2 text-centre text-md-left">Logo</div>
                         <div class="second-column col-md-9 col-12 col-lg-10">
-                            <div class="accountcol-12">Account</div>
+                            <div class="account col-12">
+                                <div class="cart text-end">
+                                    <a href="<?php echo wc_get_cart_url(); ?>"><span class="cart-icon"></span></a>
+                                    <span class="items"><?php echo WC()->cart->get_cart_contents_count();?></span>
+                                </div>
+                            </div>
                             <nav class="main-menu navbar navbar-expand-md navbar-light" role="navigation">
                                 
                                     <!-- Brand and toggle get grouped for better mobile display -->
