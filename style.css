@@ -1,5 +1,5 @@
 /*
-Theme Name: Fancy Lab
+Theme Name: Think Ecommerce
 Theme URI: http://www.inbrackets.dev/themes/fancy-lab-theme
 Author: inbrackets
 Author URI: http://www.inbrackets.dev
@@ -84,9 +84,10 @@ body{
     background-image: url('img/hamburger-menu.svg');
 }
 
+
 /* Search Form */
 .search-form button{
-    background-image:url('img/search.svg');
+    background-image: url('img/search.svg');
     height: 23px;
     width: 23px;
     background-repeat: no-repeat;
@@ -108,7 +109,7 @@ body{
     background: url('img/cart.svg');
     background-repeat: no-repeat;
     height: 25px;
-    width:25px;
+    width: 25px;
     display: inline-block;
     vertical-align: bottom;
 }
@@ -118,10 +119,11 @@ body{
     color: #fff;
     width: 20px;
     height: 20px;
-    border-radius:50%;
+    border-radius: 50%;
     display: inline-block;
     text-align: center;
 }
+
 /* Footer - Footer Menu */
 .footer-menu ul, .footer-widgets ul{ 
     list-style: none; 
