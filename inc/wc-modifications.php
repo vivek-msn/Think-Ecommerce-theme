@@ -43,10 +43,10 @@ function think_ecommerce_wc_modify(){
         function think_ecommerce_close_sidebar_tags(){
             echo '</div>';
         }
-            
-        add_action( 'woocommerce_after_shop_loop_item_title', 'the_excerpt', 1 );
-    }
-
+         // Also, if we are on a shop page, include the product description
+         add_action( 'woocommerce_after_shop_loop_item_title', 'the_excerpt', 1 );
+        }
+  
     // Modify HTML tags on a shop page. We also want Bootstrap-like markup here (.primary div)
     add_action( 'woocommerce_before_main_content', 'think_ecommerce_add_shop_tags', 9 );
     function think_ecommerce_add_shop_tags(){
@@ -56,11 +56,12 @@ function think_ecommerce_wc_modify(){
             echo '<div class="col">';
         }
     }
-
+    
     add_action( 'woocommerce_after_main_content', 'think_ecommerce_close_shop_tags', 4 );
     function think_ecommerce_close_shop_tags(){
         echo '</div>';
     }
+           
 }    
 add_action('wp', 'think_ecommerce_wc_modify');
 
