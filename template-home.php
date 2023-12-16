@@ -60,12 +60,14 @@ get_header();
                 </section>
                 <section class="popular-products">
                     <div class="container">
-                        <div class="row">Popular products</div>
+                        <h2>Popular Products</h2>
+                        <?php echo do_shortcode( '[products limit="4" columns="4" orderby="popularity"]' );?>
                     </div>
                 </section>
                 <section class="new-arrivals">
                     <div class="container">
-                        <div class="row">Ner Arrivals</div>
+                        <h2>New Arrivals</h2>
+                        <?php echo do_shortcode( '[products limit="4" columns="4" orderby="date"]' );?>
                     </div>
                 </section>
                 <section classs="deal-of-the-week">
