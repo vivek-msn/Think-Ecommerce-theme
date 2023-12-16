@@ -24,6 +24,12 @@
 
     // Theme's main stylesheet
     wp_enqueue_style( 'think-ecommerce-style', get_stylesheet_uri(), array(), filemtime( get_template_directory() . '/style.css' ), 'all' );
+    
+
+    //Bootstrap javascript and CSS files
+    wp_enqueue_script( 'flexslider-min-js', get_template_directory_uri().'/inc/flexslider/jquery.flexslider-min.js', array('jquery'),'', true);
+    wp_enqueue_style( 'flexslider-css', get_template_directory_uri().'/inc/flexslider/flexslider.css', array(), '', 'all' );
+    wp_enqueue_script( 'flexslider-js', get_template_directory_uri().'/inc/flexslider/flexslider.js', array('jquery'),'', true);
  }
  add_action( 'wp_enqueue_scripts', 'think_ecommerce_scripts' );
 
@@ -66,6 +72,9 @@
             'flex-height' => true,
             'flex-width'  => true,
         )  );
+
+        // Add custom image size function declaration.
+        add_image_size('Think-ecommerce-slider', 1920, 800, array( 'centre', 'centre' ) );
 
         if ( ! isset( $content_width ) ) {
             $content_width = 600;
