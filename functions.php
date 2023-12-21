@@ -66,6 +66,7 @@
         add_theme_support( 'wc-product-gallery-zoom' );
         add_theme_support( 'wc-product-gallery-lightbox' );
         add_theme_support( 'wc-product-gallery-slider' );
+
         add_theme_support( 'custom-logo',array(
             'height'      => 100,
             'width'       => 400,
@@ -73,6 +74,9 @@
             'flex-width'  => true,
         )  );
 
+        add_theme_support( 'post-thumbnails');
+        add_image_size('Think-ecommerce-blog', 960, 640, array( 'centre', 'centre' ) );
+        
         // Add custom image size function declaration.
         add_image_size('Think-ecommerce-slider', 1920, 800, array( 'centre', 'centre' ) );
 
