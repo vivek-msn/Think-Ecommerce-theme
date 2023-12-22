@@ -128,3 +128,16 @@ function think_ecommerce_woocommerce_header_add_to_cart_fragment( $fragments ) {
 	$fragments['span.items'] = ob_get_clean();
 	return $fragments;
 }
+
+add_action( 'widgets_init', 'think_ecommerce_sidebars' );
+function think_ecommerce_sidebars(){
+    register_sidebar( array(
+        'name'          => 'Think Ecommerce Main Sidebar',
+        'id'            => 'think-ecommerce-siderbar-1',
+        'description'   => 'Drag and drop your widgets here',
+        'before_widgets'=>  '<div id="%1$s" class="widget %2$s widget-wrapper">',
+        'after_widgets' =>  '</div>',
+        'before_title'  =>  '<h4 class="widget-title">',
+        'after_title'   =>  '</h4>',
+    ) );
+}
