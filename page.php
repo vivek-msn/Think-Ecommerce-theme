@@ -18,25 +18,24 @@ get_header(); ?>
                 <div class="container">
                     <div class="row">
                         <?php
-                            // If there are any posts
-                            if( have_posts() ):
-
-                                // Load posts loop
-                                while( have_posts() ): the_post();
-                                    ?>
-                                        <article class="col">
-                                            <h1><?php the_title(); ?></h1>
-                                            <div><?php the_content(); ?></div>
-                                        </article>
-                                    <?php
-                                endwhile;
-                            else:
-                        ?> 
-                            <p>Nothing to display</p> 
-                        <?php endif; ?>              
+                            // Load posts loop
+                            while( have_posts() ): the_post();
+                                ?>
+                                    <article class="col">
+                                        <h1><?php the_title(); ?></h1>
+                                        <div><?php the_content(); ?></div>
+                                        <?php
+                                            if( comments_open() || get_comments_number() ):
+                                                comments_template();
+                                            endif;
+                                        ?>
+                                    </article>
+                                <?php
+                            endwhile;
+                        ?>             
                     </div>
                 </div>
             </main>
         </div>
-<?php get_footer();?>        
+<?php get_footer(); ?>        
         
