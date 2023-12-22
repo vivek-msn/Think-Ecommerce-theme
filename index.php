@@ -17,6 +17,7 @@ get_header(); ?>
             <main>
                 <div class="container">
                     <div class="row">
+                            <div class="col-lg-9 col-md-8 col-12">
                         <?php
                             // If there are any posts
                             if( have_posts() ):
@@ -33,6 +34,8 @@ get_header(); ?>
                         ?> 
                             <p>Nothing to display</p> 
                         <?php endif; ?>              
+                        </div>                        
+                        <?php get_sidebar(); ?>
                     </div>
                 </div>
             </main>
