@@ -140,4 +140,40 @@ function think_ecommerce_sidebars(){
         'before_title'  =>  '<h4 class="widget-title">',
         'after_title'   =>  '</h4>',
     ) );
+    register_sidebar( array(
+        'name'          => 'Think Ecommerce Sidebar Shop',
+        'id'            => 'think-ecommerce-sidebar-shop',
+        'description'   => 'Drag and drop your WooCommerce widgets here',
+        'before_widgets'=>  '<div id="%1$s" class="widget %2$s widget-wrapper">',
+        'after_widgets' =>  '</div>',
+        'before_title'  =>  '<h4 class="widget-title">',
+        'after_title'   =>  '</h4>',
+    ) );
+    register_sidebar( array(
+        'name'          => 'Footer Sidebar 1',
+        'id'            => 'think-ecommerce-sidebar-footer1',
+        'description'   => 'Drag and drop your widgets here',
+        'before_widgets'=>  '<div id="%1$s" class="widget %2$s widget-wrapper">',
+        'after_widgets' =>  '</div>',
+        'before_title'  =>  '<h4 class="widget-title">',
+        'after_title'   =>  '</h4>',
+    ) );
+    register_sidebar( array(
+        'name'          => 'Footer Sidebar 2',
+        'id'            => 'think-ecommerce-sidebar-footer2',
+        'description'   => 'Drag and drop your widgets here',
+        'before_widgets'=>  '<div id="%1$s" class="widget %2$s widget-wrapper">',
+        'after_widgets' =>  '</div>',
+        'before_title'  =>  '<h4 class="widget-title">',
+        'after_title'   =>  '</h4>',
+    ) );
+    register_sidebar( array(
+        'name'          => 'Footer Sidebar 3',
+        'id'            => 'think-ecommerce-sidebar-footer3',
+        'description'   => 'Drag and drop your widgets here',
+        'before_widgets'=>  '<div id="%1$s" class="widget %2$s widget-wrapper">',
+        'after_widgets' =>  '</div>',
+        'before_title'  =>  '<h4 class="widget-title">',
+        'after_title'   =>  '</h4>',
+    ) );
 }
