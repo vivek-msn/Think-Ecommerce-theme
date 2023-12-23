@@ -66,13 +66,17 @@ get_header(); ?>
 
     ?>
     <div class="container">
-        <h2>Popular Products</h2>
+        <div class="section-title">
+            <h2><?php echo get_theme_mod( 'set_popular_title', __( 'Popular Products' , 'think-ecommerce' ) ); ?></h2>
+        </div>        
         <?php echo do_shortcode( '[products limit=" ' . $popular_limit . ' " columns=" ' . $popular_col . ' " orderby="popularity"]' ); ?>
     </div> 
 </section>
 <section class="new-arrivals">
     <div class="container">
-        <h2>New Arrivals</h2>
+        <div class="section-title">
+            <h2><?php echo get_theme_mod( 'set_new_arrivals_title', __( 'New Arrivals' , 'think-ecommerce' ) ); ?></h2>
+        </div>        
         <?php echo do_shortcode( '[products limit=" ' . $arrivals_limit . ' " columns=" ' . $arrivals_col . ' " orderby="date"]' ); ?>
     </div>
 </section>
@@ -93,7 +97,9 @@ if ($showdeal == 1 && !empty($deal) && is_numeric($regular) && is_numeric($sale)
 <?php if ($showdeal == 1 && !empty($deal)) : ?>
     <section class="deal-of-the-week">
         <div class="container">
-            <h2>Deal of the Week</h2>
+            <div class="section-title">
+                <h2><?php echo get_theme_mod( 'set_deal_title', __( 'Deal of the Week' , 'think-ecommerce' ) ); ?></h2>
+            </div>
             <div class="row d-flex align-items-center">
                 <div class="deal-img col-md-6 col-12 ml-auto text-center">
                     <?php echo get_the_post_thumbnail($deal, 'large', array('class' => 'img-fluid')); ?>
@@ -140,7 +146,7 @@ if ($showdeal == 1 && !empty($deal) && is_numeric($regular) && is_numeric($sale)
                         wp_reset_postdata();
                     else:
                 ?> 
-                    <p>Nothing to display.</p> 
+                    <p><?php _e( 'Nothing to display', 'think-ecommerce'); ?></p> 
                 <?php endif; ?>              
             </div>
         </div>

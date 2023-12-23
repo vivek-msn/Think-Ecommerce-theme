@@ -11,8 +11,8 @@
 
 	$wp_customize->add_section(
 		'sec_copyright', array(
-			'title'			=> 'Copyright Settings',
-			'description'	=> 'Copyright Section'
+			'title'			=> __( 'Copyright Settings','think-ecommerce' ),
+			'description'	=> __( 'Copyright Section','think-ecommerce' )
 		)
 	);
 
@@ -27,8 +27,8 @@
 
 			$wp_customize->add_control(
 				'set_copyright', array(
-					'label'			=> 'Copyright',
-					'description'	=> 'Please, add your copyright information here',
+					'label'			=> __( 'Copyright', 'think-ecommerce' ),
+					'description'	=> __( 'Please, add your copyright information here', 'think-ecommerce' ),
 					'section'		=> 'sec_copyright',
 					'type'			=> 'text'
 				)
@@ -38,8 +38,8 @@
 
 	$wp_customize->add_section(
 		'sec_slider', array(
-			'title'			=> 'Slider Settings',
-			'description'	=> 'Slider Section'
+			'title'			=> __( 'Slider Settings', 'think-ecommerce' ),
+			'description'	=> __( 'Slider Section', 'think-ecommerce' )
 		)
 	);     
 
@@ -55,8 +55,8 @@
 
 			$wp_customize->add_control(
 				'set_slider_page1', array(
-					'label'			=> 'Set slider page 1',
-					'description'	=> 'Set slider page 1',
+					'label'			=> __( 'Set slider page 1','think-ecommerce' ),
+					'description'	=> __( 'Set slider page 1','think-ecommerce' ),
 					'section'		=> 'sec_slider',
 					'type'			=> 'dropdown-pages'
 				)
@@ -74,8 +74,8 @@
 
 			$wp_customize->add_control(
 				'set_slider_button_text1', array(
-					'label'			=> 'Button Text for Page 1',
-					'description'	=> 'Button Text for Page 1',
+					'label'			=> __( 'Button Text for Page 1','think-ecommerce'),
+					'description'	=> __( 'Button Text for Page 1','think-ecommerce'),
 					'section'		=> 'sec_slider',
 					'type'			=> 'text'
 				)
@@ -93,8 +93,8 @@
 
 			$wp_customize->add_control(
 				'set_slider_button_url1', array(
-					'label'			=> 'URL for Page 1',
-					'description'	=> 'URL for Page 1',
+					'label'			=> __( 'URL for Page 1','think-ecommerce' ),
+					'description'	=> __( 'URL for Page 1','think-ecommerce' ),
 					'section'		=> 'sec_slider',
 					'type'			=> 'url'
 				)
@@ -114,8 +114,8 @@
 
 			$wp_customize->add_control(
 				'set_slider_page2', array(
-					'label'			=> 'Set slider page 2',
-					'description'	=> 'Set slider page 2',
+					'label'			=> __('Set slider page 2', 'think-ecommerce' ),
+					'description'	=> __('Set slider page 2', 'think-ecommerce' ),
 					'section'		=> 'sec_slider',
 					'type'			=> 'dropdown-pages'
 				)
@@ -133,8 +133,8 @@
 
 			$wp_customize->add_control(
 				'set_slider_button_text2', array(
-					'label'			=> 'Button Text for Page 2',
-					'description'	=> 'Button Text for Page 2',
+					'label'			=> __('Button Text for Page 2','think-ecommerce'),
+					'description'	=> __('Button Text for Page 2','think-ecommerce'),
 					'section'		=> 'sec_slider',
 					'type'			=> 'text'
 				)
@@ -152,8 +152,8 @@
 
 			$wp_customize->add_control(
 				'set_slider_button_url2', array(
-					'label'			=> 'URL for Page 2',
-					'description'	=> 'URL for Page 2',
+					'label'			=> __( 'URL for Page 2', 'think-ecommerce' ),
+					'description'	=> __( 'URL for Page 2', 'think-ecommerce' ),
 					'section'		=> 'sec_slider',
 					'type'			=> 'url'
 				)
@@ -174,8 +174,8 @@
 
 	$wp_customize->add_control(
 		'set_slider_page3', array(
-			'label'			=> 'Set slider page 3',
-			'description'	=> 'Set slider page 3',
+			'label'			=> __('Set slider page 3' , 'think-ecommerce' ),
+			'description'	=> __('Set slider page 3' , 'think-ecommerce' ),
 			'section'		=> 'sec_slider',
 			'type'			=> 'dropdown-pages'
 		)
@@ -193,8 +193,8 @@
 
 	$wp_customize->add_control(
 		'set_slider_button_text3', array(
-			'label'			=> 'Button Text for Page 3',
-			'description'	=> 'Button Text for Page 3',
+			'label'			=> __( 'Button Text for Page 3', 'think-ecommerce' ),
+			'description'	=> __( 'Button Text for Page 3', 'think-ecommerce' ),
 			'section'		=> 'sec_slider',
 			'type'			=> 'text'
 		)
@@ -212,8 +212,8 @@
 
 	$wp_customize->add_control(
 		'set_slider_button_url3', array(
-			'label'			=> 'URL for Page 3',
-			'description'	=> 'URL for Page 3',
+			'label'			=> __( 'URL for Page 3', 'think-ecommerce' ),
+			'description'	=> __( 'URL for Page 3', 'think-ecommerce' ),
 			'section'		=> 'sec_slider',
 			'type'			=> 'url'
 		)
@@ -224,8 +224,8 @@
 
 	$wp_customize->add_section(
 		'sec_home_page', array(
-			'title'			=> 'Home Page Products and Blog Settings',
-			'description'	=> 'Home Page Section'
+			'title'			=> __( 'Home Page Products and Blog Settings', 'thik-ecommerce' ) ,
+			'description'	=> __( 'Home Page Section', 'thik-ecommerce' )
 		)
 	);     
 
@@ -240,8 +240,8 @@
 
 			$wp_customize->add_control(
 				'set_popular_max_num', array(
-					'label'			=> 'Popular Products Max Number',
-					'description'	=> 'Popular Products Max Number',
+					'label'			=> __( 'Popular Products Max Number', 'think-ecommerce' ),
+					'description'	=> __( 'Popular Products Max Number', 'think-ecommerce' ),
 					'section'		=> 'sec_home_page',
 					'type'			=> 'number'
 				)
@@ -257,8 +257,8 @@
 
 			$wp_customize->add_control(
 				'set_popular_max_col', array(
-					'label'			=> 'Popular Products Max Columns',
-					'description'	=> 'Popular Products Max Columns',
+					'label'			=> __( 'Popular Products Max Columns', 'think-ecommerce' ),
+					'description'	=> __( 'Popular Products Max Columns', 'think-ecommerce' ),
 					'section'		=> 'sec_home_page',
 					'type'			=> 'number'
 				)
@@ -274,8 +274,8 @@
 
 			$wp_customize->add_control(
 				'set_new_arrivals_max_num', array(
-					'label'			=> 'New Arrivals Max Number',
-					'description'	=> 'New Arrivals Max Number',
+					'label'			=> __( 'New Arrivals Max Number', 'think-ecommerce' ),
+					'description'	=> __( 'New Arrivals Max Number', 'think-ecommerce' ),
 					'section'		=> 'sec_home_page',
 					'type'			=> 'number'
 				)
@@ -291,8 +291,8 @@
 
 			$wp_customize->add_control(
 				'set_new_arrivals_max_col', array(
-					'label'			=> 'New Arrivals Max Columns',
-					'description'	=> 'New Arrivals Max Columns',
+					'label'			=> __( 'New Arrivals Max Columns', 'think-ecommerce' ),
+					'description'	=> __( 'New Arrivals Max Columns', 'think-ecommerce' ),
 					'section'		=> 'sec_home_page',
 					'type'			=> 'number'
 				)
@@ -310,7 +310,7 @@
 
 			$wp_customize->add_control(
 				'set_deal_show', array(
-					'label'			=> 'Show Deal of the Week?',
+					'label'			=> __( 'Show Deal of the Week?', 'think-ecommerce' ),
 					'section'		=> 'sec_home_page',
 					'type'			=> 'checkbox'
 				)
@@ -328,8 +328,8 @@
 
 			$wp_customize->add_control(
 				'set_deal', array(
-					'label'			=> 'Deal of th Week Product ID',
-					'description'	=> 'Product ID to Display',
+					'label'			=> __( 'Deal of th Week Product ID', 'think-ecommerce' ),
+					'description'	=> __( 'Product ID to Display', 'think-ecommerce' ),
 					'section'		=> 'sec_home_page',
 					'type'			=> 'number'
 				)

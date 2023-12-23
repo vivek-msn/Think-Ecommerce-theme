@@ -13,7 +13,7 @@ get_header(); ?>
                 <div class="container">
                     <div class="row">
 
-                        <h1>Search results for: <?php echo get_search_query(); ?></h1>
+                        <h1><?php _e( 'Search results for', 'think-ecommerce' ); ?>: <?php echo get_search_query(); ?></h1>
                         <?php
 
                         get_search_form();
@@ -25,12 +25,12 @@ get_header(); ?>
                                     get_template_part( 'template-parts/content', 'search' );
                                 endwhile;
                                 the_posts_pagination( array(
-                                    'prev_text'     => 'Previous',
-                                    'next_text'     => 'Next',
+                                    'prev_text'     => __( 'Previous','think-ecommerce'),
+                                    'next_text'     => __( 'Next','think-ecommerce'),
                                 ));
                             else:
                         ?> 
-                            <p>There are no results for your query.</p> 
+                            <p><?php _e( 'There are no results for your query.', 'think-ecommerce'); ?></p> 
                         <?php endif; ?>              
                     </div>
                 </div>

@@ -45,10 +45,14 @@
         // This theme uses wp_nav_menu() in two locations.
         register_nav_menus(
             array(
-                'think_ecommerce_main_menu' => 'Think Ecommerce Main Menu',
-                'think_ecommerce_footer_menu' => 'Think Ecommerce Footer Menu'
+                'think_ecommerce_main_menu' => __( 'Think Ecommerce Main Menu', 'think-ecommerce' ),
+                'think_ecommerce_footer_menu' => __( 'Think Ecommerce Footer Menu', 'think-ecommerce' ),
             )
         );
+
+        $textdomain = 'think-ecommerce';
+        load_theme_textdomain( $textdomain, get_stylesheet_directory() . '/languages/' );
+        load_theme_textdomain( $textdomain, get_template_directory() . '/languages/' );
 
         // This theme is WooCommerce compatible, so we're adding support to WooCommerce
         add_theme_support( 'woocommerce', array(
@@ -132,45 +136,45 @@ function think_ecommerce_woocommerce_header_add_to_cart_fragment( $fragments ) {
 add_action( 'widgets_init', 'think_ecommerce_sidebars' );
 function think_ecommerce_sidebars(){
     register_sidebar( array(
-        'name'          => 'Think Ecommerce Main Sidebar',
+        'name'          => __( 'Think Ecommerce Main Sidebar', 'think-ecommerce' ),
         'id'            => 'think-ecommerce-siderbar-1',
-        'description'   => 'Drag and drop your widgets here',
+        'description'   => __( 'Drag and drop your widgets here', 'think-ecommerce' ),
         'before_widgets'=>  '<div id="%1$s" class="widget %2$s widget-wrapper">',
         'after_widgets' =>  '</div>',
         'before_title'  =>  '<h4 class="widget-title">',
         'after_title'   =>  '</h4>',
     ) );
     register_sidebar( array(
-        'name'          => 'Think Ecommerce Sidebar Shop',
+        'name'          => __( 'Think Ecommerce Sidebar Shop', 'think-ecommerce' ),
         'id'            => 'think-ecommerce-sidebar-shop',
-        'description'   => 'Drag and drop your WooCommerce widgets here',
+        'description'   => __( 'Drag and drop your WooCommerce widgets here', 'think-ecommerce' ),
         'before_widgets'=>  '<div id="%1$s" class="widget %2$s widget-wrapper">',
         'after_widgets' =>  '</div>',
         'before_title'  =>  '<h4 class="widget-title">',
         'after_title'   =>  '</h4>',
     ) );
     register_sidebar( array(
-        'name'          => 'Footer Sidebar 1',
+        'name'          => __( 'Footer Sidebar 1', 'think-ecommerce' ),
         'id'            => 'think-ecommerce-sidebar-footer1',
-        'description'   => 'Drag and drop your widgets here',
+        'description'   => __( 'Drag and drop your widgets here', 'think-ecommerce' ),
         'before_widgets'=>  '<div id="%1$s" class="widget %2$s widget-wrapper">',
         'after_widgets' =>  '</div>',
         'before_title'  =>  '<h4 class="widget-title">',
         'after_title'   =>  '</h4>',
     ) );
     register_sidebar( array(
-        'name'          => 'Footer Sidebar 2',
+        'name'          => __( 'Footer Sidebar 2', 'think-ecommerce' ),
         'id'            => 'think-ecommerce-sidebar-footer2',
-        'description'   => 'Drag and drop your widgets here',
+        'description'   => __( 'Drag and drop your widgets here', 'think-ecommerce' ),
         'before_widgets'=>  '<div id="%1$s" class="widget %2$s widget-wrapper">',
         'after_widgets' =>  '</div>',
         'before_title'  =>  '<h4 class="widget-title">',
         'after_title'   =>  '</h4>',
     ) );
     register_sidebar( array(
-        'name'          => 'Footer Sidebar 3',
+        'name'          => __( 'Footer Sidebar 3', 'think-ecommerce' ),
         'id'            => 'think-ecommerce-sidebar-footer3',
-        'description'   => 'Drag and drop your widgets here',
+        'description'   => __( 'Drag and drop your widgets here', 'think-ecommerce' ),
         'before_widgets'=>  '<div id="%1$s" class="widget %2$s widget-wrapper">',
         'after_widgets' =>  '</div>',
         'before_title'  =>  '<h4 class="widget-title">',

@@ -27,12 +27,12 @@ get_header(); ?>
                                     get_template_part( 'template-parts/content' );
                                 endwhile;
                                 the_posts_pagination( array(
-                                    'prev_text'     => 'Previous',
-                                    'next_text'     => 'Next',
+                                    'prev_text'     => __( 'Previous','think-ecommerce'),
+                                    'next_text'     => __( 'Next','think-ecommerce'),
                                 ));
                             else:
                         ?> 
-                            <p>Nothing to display</p> 
+                            <p><?php _e( 'Nothing to display', 'think-ecommerce'); ?></p> 
                         <?php endif; ?>              
                         </div>                        
                         <?php get_sidebar(); ?>

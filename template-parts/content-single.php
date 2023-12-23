@@ -11,10 +11,13 @@
     <header>
         <h1><?php the_title(); ?></h1>
             <div class="meta">
-            <p>Published by <?php the_author_posts_link(); ?> on <?php echo get_the_date(); ?><br/>
-            Categories: <span><?php the_category(''); ?></span>
+            <p><?php _e( 'Published by', 'think-ecommerce' ); ?> <?php the_author_posts_link(); ?> <?php _e( 'on', 'think-ecommerce' ); ?> <?php echo get_the_date(); ?>
+            <br/>
+            <?php if( has_category() ): ?>
+                <?php _e( 'Categories', 'think-ecommerce'); ?>: <span><?php the_category(''); ?></span>
+            <?php endif; ?>
             <?php if( has_tag() ): ?>
-                Tags: <span><?php the_tags( '', ', ' ); ?></span>
+                <?php _e( 'Tags', 'think-ecommerce') ;?>: <span><?php the_tags( '', ', ' ); ?></span>
             <?php endif; ?>
             </p>
             </div>
@@ -30,7 +33,7 @@
         <?php
         wp_link_pages(
             array(
-                'before'       => '<p class="inner-pagination">'.'Pages',
+                'before'       => '<p class="inner-pagination">'.__( 'Pages', 'think-ecommerce'),
                 'after'        => '</p>',
             )
         );

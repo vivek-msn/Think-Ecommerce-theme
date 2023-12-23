@@ -48,14 +48,14 @@
 										<ul class="navbar-nav float-left">
 											<?php if( is_user_logged_in() ) : ?>
 											<li>
-												<a href="<?php echo esc_url( get_permalink( get_option( 'woocommerce_myaccount_page_id' ) ) ) ?>" class="nav-link">My Account</a>
+												<a href="<?php echo esc_url( get_permalink( get_option( 'woocommerce_myaccount_page_id' ) ) ) ?>" class="nav-link"><?php _e( 'My Account' , 'think-ecommerce' ); ?></a>
 											</li>
 											<li>
-												<a href="<?php echo esc_url( wp_logout_url( get_permalink( get_option( 'woocommerce_myaccount_page_id' ) ) ) ) ?>" class="nav-link">Logout</a>
+												<a href="<?php echo esc_url( wp_logout_url( get_permalink( get_option( 'woocommerce_myaccount_page_id' ) ) ) ) ?>" class="nav-link"><?php _e( 'Logout' , 'think-ecommerce' ); ?></a>
 											</li>
 											<?php else: ?>
 											<li>
-												<a href="<?php echo esc_url( get_permalink( get_option( 'woocommerce_myaccount_page_id' ) ) ) ?>" class="nav-link">Login / Register</a>
+												<a href="<?php echo esc_url( get_permalink( get_option( 'woocommerce_myaccount_page_id' ) ) ) ?>" class="nav-link"><?php _e( 'Login/Register' , 'think-ecommerce' ); ?></a>
 											</li>												
 											<?php endif; ?>
 										</ul>
@@ -69,7 +69,7 @@
 								<div class="col-12">
 									<nav class="main-menu navbar navbar-expand-md navbar-light" role="navigation">
 										<!-- Brand and toggle get grouped for better mobile display -->
-										<button class="navbar-toggler ml-auto" type="button" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-controls="bs-example-navbar-collapse-1" aria-expanded="false" aria-label="Toggle navigation">
+										<button class="navbar-toggler ml-auto" type="button" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-controls="bs-example-navbar-collapse-1" aria-expanded="false" aria-label="<?php _e( 'Toggle navigation' , 'think-ecommerce' ); ?>">
 											<span class="navbar-toggler-icon"></span>
 										</button>
 											<?php
