@@ -19,17 +19,15 @@
         ?>
     </div>
     <div class="meta">
-    <p><?php _e( 'Published by', 'think-ecommerce' ); ?> <?php the_author_posts_link(); ?> <?php _e( 'on', 'think-ecommerce' ); ?> <?php echo get_the_date(); ?>
-        <br/>
-        <?php if( has_category() ): ?>
-            <?php _e( 'Categories', 'think-ecommerce'); ?>: <span><?php the_category(''); ?></span>
-        <?php endif; ?>
-        <br/>
-        <?php if( has_tag() ): ?>
-            <?php _e( 'Tags', 'think-ecommerce') ;?>: <span><?php the_tags( '', ', ' ); ?></span>
-        <?php endif; ?>
-        </p>
-    </div>
+            <p><?php esc_html_e( 'Published by', 'think-ecommerce' ); ?> <?php the_author_posts_link(); ?> <?php _e( 'on', 'think-ecommerce' ); ?> <?php echo get_the_date(); ?>
+            <br/>
+            <?php if( has_category() ): ?>
+                <?php esc_html_e( 'Categories', 'think-ecommerce'); ?>: <span><?php the_category(''); ?></span>
+            <?php endif; ?>
+            <?php if( has_tag() ): ?>
+                <?php esc_html_e( 'Tags', 'think-ecommerce') ;?>: <span><?php the_tags( '', ', ' ); ?></span>
+            <?php endif; ?>
+            </p>
     <div>
         <?php the_excerpt(); ?>
     </div>

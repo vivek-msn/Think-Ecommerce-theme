@@ -41,7 +41,7 @@ get_header(); ?>
                         </div>
                         <div class="slider-description">
                             <div class="subtitle"><?php the_content(); ?></div>
-                            <a href="<?php echo $slider_button_url[$j]; ?>" class="link"><?php echo $slider_button_text[$j]; ?></a>
+                            <a href="<?php echo esc_url( $slider_button_url[$j] ); ?>" class="link"><?php echo esc_html( $slider_button_text[$j] ); ?></a>
                         </div>
                     </div>
                 </div>
@@ -67,17 +67,17 @@ get_header(); ?>
     ?>
     <div class="container">
         <div class="section-title">
-            <h2><?php echo get_theme_mod( 'set_popular_title', __( 'Popular Products' , 'think-ecommerce' ) ); ?></h2>
+            <h2><?php echo esc_html( get_theme_mod( 'set_popular_title', __( 'Popular Products' , 'think-ecommerce' ) ) ); ?></h2>
         </div>        
-        <?php echo do_shortcode( '[products limit=" ' . $popular_limit . ' " columns=" ' . $popular_col . ' " orderby="popularity"]' ); ?>
+        <?php echo do_shortcode( '[products limit=" ' . esc_attr( $popular_limit ) . ' " columns=" ' . esc_attr( $popular_col ) . ' " orderby="popularity"]' ); ?>
     </div> 
 </section>
 <section class="new-arrivals">
     <div class="container">
         <div class="section-title">
-            <h2><?php echo get_theme_mod( 'set_new_arrivals_title', __( 'New Arrivals' , 'think-ecommerce' ) ); ?></h2>
+            <h2><?php echo esc_html( get_theme_mod( 'set_new_arrivals_title', __( 'New Arrivals' , 'think-ecommerce' ) ) ); ?></h2>
         </div>        
-        <?php echo do_shortcode( '[products limit=" ' . $arrivals_limit . ' " columns=" ' . $arrivals_col . ' " orderby="date"]' ); ?>
+        <?php echo do_shortcode( '[products limit=" ' . esc_attr( $arrivals_limit ) . ' " columns=" ' . esc_attr( $arrivals_col ) . ' " orderby="date"]' ); ?>
     </div>
 </section>
 <?php
@@ -98,14 +98,14 @@ if ($showdeal == 1 && !empty($deal) && is_numeric($regular) && is_numeric($sale)
     <section class="deal-of-the-week">
         <div class="container">
             <div class="section-title">
-                <h2><?php echo get_theme_mod( 'set_deal_title', __( 'Deal of the Week' , 'think-ecommerce' ) ); ?></h2>
+                <h2><?php echo esc_html( get_theme_mod( 'set_deal_title', __( 'Deal of the Week' , 'think-ecommerce' ) ) ); ?></h2>
             </div>
             <div class="row d-flex align-items-center">
                 <div class="deal-img col-md-6 col-12 ml-auto text-center">
                     <?php echo get_the_post_thumbnail($deal, 'large', array('class' => 'img-fluid')); ?>
                 </div>
                 <div class="deal-desc col-md-4 col-12 mr-auto text-center">
-                    <p><?php echo esc_html__('Discount:', 'your-text-domain'); ?> <?php echo $discount_percentage; ?>%</p>
+                    <p><?php echo esc_html__('Discount:', 'your-text-domain'); ?> <?php echo esc_html( $discount_percentage ); ?>%</p>
                     <!-- Add more deal information here -->
                 </div>
             </div>
@@ -146,7 +146,7 @@ if ($showdeal == 1 && !empty($deal) && is_numeric($regular) && is_numeric($sale)
                         wp_reset_postdata();
                     else:
                 ?> 
-                    <p><?php _e( 'Nothing to display', 'think-ecommerce'); ?></p> 
+                    <p><?php esc_html_e( 'Nothing to display', 'think-ecommerce'); ?></p> 
                 <?php endif; ?>              
             </div>
         </div>

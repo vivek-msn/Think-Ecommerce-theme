@@ -45,8 +45,8 @@
         // This theme uses wp_nav_menu() in two locations.
         register_nav_menus(
             array(
-                'think_ecommerce_main_menu' => __( 'Think Ecommerce Main Menu', 'think-ecommerce' ),
-                'think_ecommerce_footer_menu' => __( 'Think Ecommerce Footer Menu', 'think-ecommerce' ),
+                'think_ecommerce_main_menu' => esc_html__( 'Think Ecommerce Main Menu', 'think-ecommerce' ),
+                'think_ecommerce_footer_menu' => esc_html__( 'Think Ecommerce Footer Menu', 'think-ecommerce' ),
             )
         );
 
@@ -136,45 +136,45 @@ function think_ecommerce_woocommerce_header_add_to_cart_fragment( $fragments ) {
 add_action( 'widgets_init', 'think_ecommerce_sidebars' );
 function think_ecommerce_sidebars(){
     register_sidebar( array(
-        'name'          => __( 'Think Ecommerce Main Sidebar', 'think-ecommerce' ),
+        'name'          => esc_html__( 'Think Ecommerce Main Sidebar', 'think-ecommerce' ),
         'id'            => 'think-ecommerce-siderbar-1',
-        'description'   => __( 'Drag and drop your widgets here', 'think-ecommerce' ),
+        'description'   => esc_html__( 'Drag and drop your widgets here', 'think-ecommerce' ),
         'before_widgets'=>  '<div id="%1$s" class="widget %2$s widget-wrapper">',
         'after_widgets' =>  '</div>',
         'before_title'  =>  '<h4 class="widget-title">',
         'after_title'   =>  '</h4>',
     ) );
     register_sidebar( array(
-        'name'          => __( 'Think Ecommerce Sidebar Shop', 'think-ecommerce' ),
+        'name'          => esc_html__( 'Think Ecommerce Sidebar Shop', 'think-ecommerce' ),
         'id'            => 'think-ecommerce-sidebar-shop',
-        'description'   => __( 'Drag and drop your WooCommerce widgets here', 'think-ecommerce' ),
+        'description'   => esc_html__( 'Drag and drop your WooCommerce widgets here', 'think-ecommerce' ),
         'before_widgets'=>  '<div id="%1$s" class="widget %2$s widget-wrapper">',
         'after_widgets' =>  '</div>',
         'before_title'  =>  '<h4 class="widget-title">',
         'after_title'   =>  '</h4>',
     ) );
     register_sidebar( array(
-        'name'          => __( 'Footer Sidebar 1', 'think-ecommerce' ),
+        'name'          => esc_html__( 'Footer Sidebar 1', 'think-ecommerce' ),
         'id'            => 'think-ecommerce-sidebar-footer1',
-        'description'   => __( 'Drag and drop your widgets here', 'think-ecommerce' ),
+        'description'   => esc_html__( 'Drag and drop your widgets here', 'think-ecommerce' ),
         'before_widgets'=>  '<div id="%1$s" class="widget %2$s widget-wrapper">',
         'after_widgets' =>  '</div>',
         'before_title'  =>  '<h4 class="widget-title">',
         'after_title'   =>  '</h4>',
     ) );
     register_sidebar( array(
-        'name'          => __( 'Footer Sidebar 2', 'think-ecommerce' ),
+        'name'          => esc_html__( 'Footer Sidebar 2', 'think-ecommerce' ),
         'id'            => 'think-ecommerce-sidebar-footer2',
-        'description'   => __( 'Drag and drop your widgets here', 'think-ecommerce' ),
+        'description'   => esc_html__( 'Drag and drop your widgets here', 'think-ecommerce' ),
         'before_widgets'=>  '<div id="%1$s" class="widget %2$s widget-wrapper">',
         'after_widgets' =>  '</div>',
         'before_title'  =>  '<h4 class="widget-title">',
         'after_title'   =>  '</h4>',
     ) );
     register_sidebar( array(
-        'name'          => __( 'Footer Sidebar 3', 'think-ecommerce' ),
+        'name'          => esc_html__( 'Footer Sidebar 3', 'think-ecommerce' ),
         'id'            => 'think-ecommerce-sidebar-footer3',
-        'description'   => __( 'Drag and drop your widgets here', 'think-ecommerce' ),
+        'description'   => esc_html__( 'Drag and drop your widgets here', 'think-ecommerce' ),
         'before_widgets'=>  '<div id="%1$s" class="widget %2$s widget-wrapper">',
         'after_widgets' =>  '</div>',
         'before_title'  =>  '<h4 class="widget-title">',
