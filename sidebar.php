@@ -2,7 +2,7 @@
 /**
  * The template for the sidebar containing the main widget area
  *
- * @package think ecommerce
+ * @package Think Ecommerce
  */
 ?>
 

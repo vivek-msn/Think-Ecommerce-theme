@@ -5,7 +5,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: "
-"Think ecommerce v1.0.0\n"
+"Think Ecommerce v1.0.0\n"
 "Report-Msgid-Bugs-To: "
 "Translator Name "
 "<translations@example."

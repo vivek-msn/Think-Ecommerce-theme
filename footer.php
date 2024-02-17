@@ -6,7 +6,7 @@
  *
  * @link https://developer.wordpress.org/themes/basics/template-hierarchy/
  *
- * @package think ecommerce
+ * @package Think Ecommerce
  */
 ?>
         <footer>
