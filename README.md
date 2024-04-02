@@ -5,10 +5,17 @@ Think Ecommerce is a WordPress theme designed for Ecommerce, bloggers, businesse
 ## Features
 
 - Responsive design: Looks great on any device, from mobile to desktop.
+- Inbuilt Slider: No Need to Add Third Party Slider Plugin.
 - Customizer support: Easily customize the theme with live previews.
 - SEO friendly: Built with best SEO practices in mind to help your website rank higher.
 - Translation ready: Use the theme in any language.
 - Supports Woocommerce Plugin.
+
+## Demo
+
+![Think Ecommerce Wordpress Theme ](/demo/demo.gif)
+
+You can see a live demo [here](https://thinkecommerce.ithinkservices.com/).
 
 ## Installation
 
