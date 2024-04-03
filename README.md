@@ -13,7 +13,7 @@ Think Ecommerce is a WordPress theme designed for Ecommerce, bloggers, businesse
 
 ## Demo
 
-![Think Ecommerce Wordpress Theme ](/demo/demo.gif)
+![Think Ecommerce Wordpress Theme ](/screenshot.png)
 
 You can see a live demo [here](https://thinkecommerce.ithinkservices.com/).
 
