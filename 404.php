@@ -14,7 +14,7 @@ get_header();
         <div class="container">
             <div class="error-404">
                 <header>
-                    <h1><?php esc_html_e('Page not found', 'think-ecommerce' ); ?></h1>
+                    <h2><?php esc_html_e('Page not found', 'think-ecommerce' ); ?></h2>
                     <p><?php esc_html_e( 'Unfortunately, the page you tried to reach does not exist on this site!', 'think-ecommerce' ); ?></p>
                 </header>
                 <?php
