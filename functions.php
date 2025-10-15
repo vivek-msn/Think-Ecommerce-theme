@@ -226,10 +226,10 @@ class WC_Bootstrap_Filter_Widget extends WP_Widget {
         if (!empty($categories) && !is_wp_error($categories)) {
             echo '<div class="mb-4">';
             echo '<h5 class="mb-3">Categories</h5>';
-            echo '<ul class="list-group">';
+            echo '<ul class="list-unstyled">'; // removes bullets
             foreach ($categories as $category) {
-                echo '<li class="list-group-item">';
-                echo '<a href="' . esc_url(get_term_link($category)) . '">' . esc_html($category->name) . '</a>';
+                echo '<li class="mb-2">';
+                echo '<a class="text-decoration-none" href="' . esc_url(get_term_link($category)) . '">' . esc_html($category->name) . '</a>';
                 echo '</li>';
             }
             echo '</ul>';
