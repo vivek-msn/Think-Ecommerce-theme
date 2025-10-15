@@ -218,7 +218,8 @@ class WC_Bootstrap_Filter_Widget extends WP_Widget {
 
         // Title
         if (!empty($instance['title'])) {
-            echo $args['before_title'] . apply_filters('widget_title', $instance['title']) . $args['after_title'];
+            echo $args['before_title'] . '<span class="d-block mb-3">' . apply_filters('widget_title', $instance['title']) . '</span>' . $args['after_title'];
+
         }
 
         // Categories
