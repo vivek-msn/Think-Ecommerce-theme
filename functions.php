@@ -201,7 +201,7 @@
 
     add_action( 'widgets_init', 'think_ecommerce_sidebars' );
 
-    <?php
+
 class WC_Bootstrap_Filter_Widget extends WP_Widget {
 
     public function __construct() {
