@@ -200,3 +200,78 @@
     }
 
     add_action( 'widgets_init', 'think_ecommerce_sidebars' );
+
+    <?php
+class WC_Bootstrap_Filter_Widget extends WP_Widget {
+
+    public function __construct() {
+        parent::__construct(
+            'wc_bootstrap_filter_widget',
+            __('Woo Filter (Bootstrap)', 'text_domain'),
+            array('description' => __('Filter WooCommerce products by category and price using Bootstrap', 'text_domain'))
+        );
+    }
+
+    // Frontend display
+    public function widget($args, $instance) {
+        echo $args['before_widget'];
+
+        // Title
+        if (!empty($instance['title'])) {
+            echo $args['before_title'] . apply_filters('widget_title', $instance['title']) . $args['after_title'];
+        }
+
+        // Categories
+        $categories = get_terms('product_cat', array('hide_empty' => true));
+        if (!empty($categories) && !is_wp_error($categories)) {
+            echo '<div class="mb-4">';
+            echo '<h5 class="mb-3">Categories</h5>';
+            echo '<ul class="list-group">';
+            foreach ($categories as $category) {
+                echo '<li class="list-group-item">';
+                echo '<a href="' . esc_url(get_term_link($category)) . '">' . esc_html($category->name) . '</a>';
+                echo '</li>';
+            }
+            echo '</ul>';
+            echo '</div>';
+        }
+
+        // Price Filter
+        echo '<div>';
+        echo '<h5 class="mb-3">Filter by Price</h5>';
+        echo '<form method="GET" action="' . esc_url(get_permalink(wc_get_page_id('shop'))) . '">';
+        echo '<div class="mb-2"><input type="number" class="form-control" name="min_price" placeholder="Min Price"></div>';
+        echo '<div class="mb-3"><input type="number" class="form-control" name="max_price" placeholder="Max Price"></div>';
+        echo '<button type="submit" class="btn btn-primary w-100">Filter</button>';
+        echo '</form>';
+        echo '</div>';
+
+        echo $args['after_widget'];
+    }
+
+    // Backend widget form
+    public function form($instance) {
+        $title = !empty($instance['title']) ? $instance['title'] : __('Filter Products', 'text_domain');
+        ?>
+        <p>
+            <label for="<?php echo esc_attr($this->get_field_id('title')); ?>">Title:</label>
+            <input class="widefat" id="<?php echo esc_attr($this->get_field_id('title')); ?>"
+                name="<?php echo esc_attr($this->get_field_name('title')); ?>" type="text"
+                value="<?php echo esc_attr($title); ?>">
+        </p>
+        <?php
+    }
+
+    // Save widget form values
+    public function update($new_instance, $old_instance) {
+        $instance = array();
+        $instance['title'] = (!empty($new_instance['title'])) ? sanitize_text_field($new_instance['title']) : '';
+        return $instance;
+    }
+}
+
+// Register widget
+function register_wc_bootstrap_filter_widget() {
+    register_widget('WC_Bootstrap_Filter_Widget');
+}
+add_action('widgets_init', 'register_wc_bootstrap_filter_widget');
