@@ -19,7 +19,7 @@ jobs:
           server: ${{ secrets.FTP_HOST }}
           username: ${{ secrets.FTP_USER }}
           password: ${{ secrets.FTP_PASSWORD }}
-          local-dir: Think-Ecommerce/
+          local-dir: Think-Ecommerce-theme/
           server-dir: thinkecommerce.ithinkservices.com/wp-content/themes/Think-Ecommerce/
           protocol: ftp
           port: 21
