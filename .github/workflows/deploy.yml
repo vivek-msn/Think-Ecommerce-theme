@@ -11,13 +11,15 @@ jobs:
 
     steps:
       - name: Checkout Repository
-        uses: actions/checkout@v4
+        uses: actions/checkout@v3
 
       - name: Deploy wp-content via FTP
-        uses: SamKirkland/FTP-Deploy-Action@v4.0.0
+        uses: SamKirkland/FTP-Deploy-Action@v4.3.4
         with:
           server: ${{ secrets.FTP_HOST }}
           username: ${{ secrets.FTP_USER }}
           password: ${{ secrets.FTP_PASSWORD }}
           local-dir: Think-Ecommerce/
           server-dir: thinkecommerce.ithinkservices.com/wp-content/themes/Think-Ecommerce/
+          protocol: ftp
+          port: 21
